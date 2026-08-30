@@ -1,0 +1,14 @@
+langchain-groq
+langgraph
+langchain-core
+chromadb
+sentence-transformers
+sqlalchemy
+pandas
+pymupdf
+python-docx
+unstructured
+tiktoken
+streamlit
+python-dotenv
+rank_bm25
