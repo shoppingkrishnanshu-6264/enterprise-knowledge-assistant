@@ -1,0 +1,512 @@
+order_id,quarter,region,product,customer_tier,contract_value_usd,refunded,refund_amount_usd,sales_rep
+1000,2025-Q1,North America,Northwind CRM,Business,51597.91,False,0.0,L. Fernandez
+1001,2025-Q1,North America,Northwind CRM,Enterprise,90775.06,False,0.0,J. Osei
+1002,2025-Q1,North America,Northwind CRM,Business,38822.09,False,0.0,K. Tanaka
+1003,2025-Q1,North America,Northwind CRM,Business,38727.65,False,0.0,M. Dubois
+1004,2025-Q1,North America,Northwind CRM,Business,48856.78,False,0.0,A. Mehta
+1005,2025-Q1,North America,Northwind CRM,Enterprise,74022.96,False,0.0,R. Kapoor
+1006,2025-Q1,North America,Northwind CRM,Business,55479.84,False,0.0,J. Osei
+1007,2025-Q1,North America,Northwind CRM,Business,44711.63,False,0.0,R. Kapoor
+1008,2025-Q1,North America,Northwind Analytics,Enterprise,61314.7,False,0.0,M. Dubois
+1009,2025-Q1,North America,Northwind Analytics,Business,30952.68,False,0.0,S. Novak
+1010,2025-Q1,North America,Northwind Analytics,Business,36218.52,True,11050.58,R. Kapoor
+1011,2025-Q1,North America,Northwind Support Desk,Enterprise,45231.23,False,0.0,T. Owusu
+1012,2025-Q1,North America,Northwind Support Desk,Enterprise,37646.26,False,0.0,K. Tanaka
+1013,2025-Q1,North America,Northwind Support Desk,Enterprise,42741.52,False,0.0,J. Osei
+1014,2025-Q1,North America,Northwind Billing Suite,Enterprise,53608.26,False,0.0,T. Owusu
+1015,2025-Q1,North America,Northwind Billing Suite,Business,34882.66,False,0.0,K. Tanaka
+1016,2025-Q1,North America,Northwind Billing Suite,Enterprise,59831.89,False,0.0,K. Tanaka
+1017,2025-Q1,North America,Northwind Billing Suite,Enterprise,59069.72,False,0.0,J. Osei
+1018,2025-Q1,North America,Northwind Billing Suite,Business,34360.59,False,0.0,S. Novak
+1019,2025-Q1,North America,Northwind Billing Suite,Business,29391.39,False,0.0,T. Owusu
+1020,2025-Q1,North America,Northwind Billing Suite,Business,25363.86,False,0.0,R. Kapoor
+1021,2025-Q1,EMEA,Northwind CRM,Business,54410.81,False,0.0,K. Tanaka
+1022,2025-Q1,EMEA,Northwind CRM,Enterprise,73331.95,False,0.0,A. Mehta
+1023,2025-Q1,EMEA,Northwind CRM,Enterprise,73802.06,False,0.0,M. Dubois
+1024,2025-Q1,EMEA,Northwind CRM,Business,45175.81,False,0.0,T. Owusu
+1025,2025-Q1,EMEA,Northwind CRM,Business,55729.41,False,0.0,A. Mehta
+1026,2025-Q1,EMEA,Northwind CRM,Enterprise,72561.48,False,0.0,R. Kapoor
+1027,2025-Q1,EMEA,Northwind CRM,Enterprise,79871.69,False,0.0,L. Fernandez
+1028,2025-Q1,EMEA,Northwind CRM,Business,55418.69,False,0.0,R. Kapoor
+1029,2025-Q1,EMEA,Northwind Analytics,Enterprise,60656.99,False,0.0,R. Kapoor
+1030,2025-Q1,EMEA,Northwind Analytics,Enterprise,60656.55,False,0.0,S. Novak
+1031,2025-Q1,EMEA,Northwind Analytics,Enterprise,61387.29,False,0.0,A. Mehta
+1032,2025-Q1,EMEA,Northwind Analytics,Business,33454.15,False,0.0,S. Novak
+1033,2025-Q1,EMEA,Northwind Analytics,Enterprise,68121.57,False,0.0,A. Mehta
+1034,2025-Q1,EMEA,Northwind Analytics,Business,34462.17,False,0.0,T. Owusu
+1035,2025-Q1,EMEA,Northwind Analytics,Enterprise,71492.76,False,0.0,L. Fernandez
+1036,2025-Q1,EMEA,Northwind Support Desk,Enterprise,46446.35,False,0.0,M. Dubois
+1037,2025-Q1,EMEA,Northwind Support Desk,Enterprise,46175.17,False,0.0,K. Tanaka
+1038,2025-Q1,EMEA,Northwind Support Desk,Enterprise,38162.76,False,0.0,S. Novak
+1039,2025-Q1,EMEA,Northwind Support Desk,Business,22197.64,False,0.0,K. Tanaka
+1040,2025-Q1,EMEA,Northwind Billing Suite,Business,30389.06,False,0.0,K. Tanaka
+1041,2025-Q1,EMEA,Northwind Billing Suite,Business,31727.82,True,5097.4,A. Mehta
+1042,2025-Q1,EMEA,Northwind Billing Suite,Enterprise,44268.48,False,0.0,T. Owusu
+1043,2025-Q1,APAC,Northwind CRM,Business,51270.35,False,0.0,T. Owusu
+1044,2025-Q1,APAC,Northwind CRM,Business,46763.51,False,0.0,J. Osei
+1045,2025-Q1,APAC,Northwind CRM,Business,46008.92,False,0.0,T. Owusu
+1046,2025-Q1,APAC,Northwind CRM,Enterprise,70605.15,False,0.0,J. Osei
+1047,2025-Q1,APAC,Northwind Analytics,Business,31543.07,False,0.0,K. Tanaka
+1048,2025-Q1,APAC,Northwind Analytics,Business,34064.46,False,0.0,L. Fernandez
+1049,2025-Q1,APAC,Northwind Analytics,Business,30397.52,False,0.0,T. Owusu
+1050,2025-Q1,APAC,Northwind Support Desk,Business,23328.02,False,0.0,A. Mehta
+1051,2025-Q1,APAC,Northwind Support Desk,Enterprise,46136.67,False,0.0,L. Fernandez
+1052,2025-Q1,APAC,Northwind Support Desk,Business,21893.41,False,0.0,A. Mehta
+1053,2025-Q1,APAC,Northwind Support Desk,Business,17868.11,False,0.0,T. Owusu
+1054,2025-Q1,APAC,Northwind Support Desk,Business,23701.37,False,0.0,T. Owusu
+1055,2025-Q1,APAC,Northwind Support Desk,Business,20342.35,False,0.0,A. Mehta
+1056,2025-Q1,APAC,Northwind Support Desk,Enterprise,32994.34,False,0.0,L. Fernandez
+1057,2025-Q1,APAC,Northwind Billing Suite,Enterprise,44455.05,False,0.0,J. Osei
+1058,2025-Q1,APAC,Northwind Billing Suite,Enterprise,47581.71,False,0.0,K. Tanaka
+1059,2025-Q1,APAC,Northwind Billing Suite,Business,24245.11,False,0.0,S. Novak
+1060,2025-Q1,LATAM,Northwind CRM,Business,51141.45,False,0.0,M. Dubois
+1061,2025-Q1,LATAM,Northwind CRM,Business,49869.01,False,0.0,J. Osei
+1062,2025-Q1,LATAM,Northwind CRM,Business,49430.87,False,0.0,J. Osei
+1063,2025-Q1,LATAM,Northwind CRM,Business,42086.78,False,0.0,S. Novak
+1064,2025-Q1,LATAM,Northwind CRM,Enterprise,97338.36,False,0.0,L. Fernandez
+1065,2025-Q1,LATAM,Northwind Analytics,Enterprise,65169.56,False,0.0,A. Mehta
+1066,2025-Q1,LATAM,Northwind Analytics,Enterprise,61738.04,False,0.0,J. Osei
+1067,2025-Q1,LATAM,Northwind Analytics,Enterprise,52054.07,False,0.0,J. Osei
+1068,2025-Q1,LATAM,Northwind Analytics,Enterprise,52541.52,False,0.0,K. Tanaka
+1069,2025-Q1,LATAM,Northwind Analytics,Enterprise,53650.88,False,0.0,R. Kapoor
+1070,2025-Q1,LATAM,Northwind Analytics,Business,30414.35,False,0.0,A. Mehta
+1071,2025-Q1,LATAM,Northwind Support Desk,Enterprise,44669.74,True,17876.87,L. Fernandez
+1072,2025-Q1,LATAM,Northwind Support Desk,Enterprise,36090.76,False,0.0,M. Dubois
+1073,2025-Q1,LATAM,Northwind Support Desk,Business,18789.74,False,0.0,L. Fernandez
+1074,2025-Q1,LATAM,Northwind Billing Suite,Business,27935.22,False,0.0,M. Dubois
+1075,2025-Q1,LATAM,Northwind Billing Suite,Business,27252.49,False,0.0,A. Mehta
+1076,2025-Q1,LATAM,Northwind Billing Suite,Enterprise,47075.14,False,0.0,J. Osei
+1077,2025-Q1,LATAM,Northwind Billing Suite,Business,30070.7,False,0.0,L. Fernandez
+1078,2025-Q1,LATAM,Northwind Billing Suite,Enterprise,47612.62,False,0.0,L. Fernandez
+1079,2025-Q1,LATAM,Northwind Billing Suite,Enterprise,43339.69,False,0.0,S. Novak
+1080,2025-Q1,LATAM,Northwind Billing Suite,Enterprise,51140.14,False,0.0,K. Tanaka
+1081,2025-Q2,North America,Northwind CRM,Business,50873.01,False,0.0,A. Mehta
+1082,2025-Q2,North America,Northwind CRM,Enterprise,76056.85,False,0.0,T. Owusu
+1083,2025-Q2,North America,Northwind CRM,Business,53019.65,False,0.0,K. Tanaka
+1084,2025-Q2,North America,Northwind CRM,Business,41726.34,False,0.0,J. Osei
+1085,2025-Q2,North America,Northwind CRM,Enterprise,77893.65,False,0.0,M. Dubois
+1086,2025-Q2,North America,Northwind Analytics,Enterprise,61314.41,False,0.0,J. Osei
+1087,2025-Q2,North America,Northwind Analytics,Enterprise,54978.4,False,0.0,R. Kapoor
+1088,2025-Q2,North America,Northwind Analytics,Business,34836.11,False,0.0,S. Novak
+1089,2025-Q2,North America,Northwind Analytics,Business,39798.22,False,0.0,K. Tanaka
+1090,2025-Q2,North America,Northwind Analytics,Business,36272.45,True,33842.84,K. Tanaka
+1091,2025-Q2,North America,Northwind Analytics,Business,28095.66,False,0.0,S. Novak
+1092,2025-Q2,North America,Northwind Analytics,Enterprise,64244.45,False,0.0,R. Kapoor
+1093,2025-Q2,North America,Northwind Analytics,Business,35736.23,False,0.0,R. Kapoor
+1094,2025-Q2,North America,Northwind Support Desk,Business,21381.75,False,0.0,L. Fernandez
+1095,2025-Q2,North America,Northwind Support Desk,Enterprise,36680.36,False,0.0,A. Mehta
+1096,2025-Q2,North America,Northwind Support Desk,Business,19615.53,False,0.0,S. Novak
+1097,2025-Q2,North America,Northwind Support Desk,Business,21564.14,False,0.0,T. Owusu
+1098,2025-Q2,North America,Northwind Support Desk,Enterprise,46642.66,False,0.0,J. Osei
+1099,2025-Q2,North America,Northwind Support Desk,Business,23426.37,False,0.0,J. Osei
+1100,2025-Q2,North America,Northwind Support Desk,Enterprise,43487.21,False,0.0,K. Tanaka
+1101,2025-Q2,North America,Northwind Billing Suite,Business,24317.59,False,0.0,J. Osei
+1102,2025-Q2,North America,Northwind Billing Suite,Business,33724.73,False,0.0,M. Dubois
+1103,2025-Q2,North America,Northwind Billing Suite,Business,26532.63,False,0.0,A. Mehta
+1104,2025-Q2,North America,Northwind Billing Suite,Enterprise,60186.48,False,0.0,M. Dubois
+1105,2025-Q2,EMEA,Northwind CRM,Business,55493.39,False,0.0,A. Mehta
+1106,2025-Q2,EMEA,Northwind CRM,Business,54764.46,False,0.0,L. Fernandez
+1107,2025-Q2,EMEA,Northwind CRM,Enterprise,90479.52,False,0.0,S. Novak
+1108,2025-Q2,EMEA,Northwind CRM,Enterprise,97732.2,False,0.0,M. Dubois
+1109,2025-Q2,EMEA,Northwind Analytics,Business,29237.22,False,0.0,T. Owusu
+1110,2025-Q2,EMEA,Northwind Analytics,Business,30364.67,False,0.0,T. Owusu
+1111,2025-Q2,EMEA,Northwind Analytics,Enterprise,55286.73,False,0.0,R. Kapoor
+1112,2025-Q2,EMEA,Northwind Analytics,Business,31498.85,False,0.0,J. Osei
+1113,2025-Q2,EMEA,Northwind Analytics,Business,30160.15,False,0.0,K. Tanaka
+1114,2025-Q2,EMEA,Northwind Analytics,Business,32417.27,False,0.0,M. Dubois
+1115,2025-Q2,EMEA,Northwind Analytics,Business,37861.01,False,0.0,A. Mehta
+1116,2025-Q2,EMEA,Northwind Support Desk,Business,17899.53,False,0.0,M. Dubois
+1117,2025-Q2,EMEA,Northwind Support Desk,Enterprise,46545.87,False,0.0,K. Tanaka
+1118,2025-Q2,EMEA,Northwind Support Desk,Business,20142.66,False,0.0,M. Dubois
+1119,2025-Q2,EMEA,Northwind Support Desk,Business,23554.79,False,0.0,L. Fernandez
+1120,2025-Q2,EMEA,Northwind Support Desk,Enterprise,46033.47,False,0.0,A. Mehta
+1121,2025-Q2,EMEA,Northwind Support Desk,Enterprise,41079.42,False,0.0,J. Osei
+1122,2025-Q2,EMEA,Northwind Support Desk,Enterprise,34181.78,False,0.0,A. Mehta
+1123,2025-Q2,EMEA,Northwind Billing Suite,Business,26170.6,False,0.0,M. Dubois
+1124,2025-Q2,EMEA,Northwind Billing Suite,Business,34453.49,False,0.0,J. Osei
+1125,2025-Q2,EMEA,Northwind Billing Suite,Business,32189.07,True,30796.18,K. Tanaka
+1126,2025-Q2,EMEA,Northwind Billing Suite,Enterprise,58589.66,False,0.0,A. Mehta
+1127,2025-Q2,EMEA,Northwind Billing Suite,Enterprise,46859.11,True,11112.36,L. Fernandez
+1128,2025-Q2,APAC,Northwind CRM,Enterprise,87122.61,False,0.0,R. Kapoor
+1129,2025-Q2,APAC,Northwind CRM,Enterprise,74286.37,False,0.0,J. Osei
+1130,2025-Q2,APAC,Northwind CRM,Enterprise,74156.01,False,0.0,A. Mehta
+1131,2025-Q2,APAC,Northwind CRM,Enterprise,87505.81,False,0.0,M. Dubois
+1132,2025-Q2,APAC,Northwind CRM,Business,51120.26,False,0.0,K. Tanaka
+1133,2025-Q2,APAC,Northwind CRM,Business,52154.66,False,0.0,J. Osei
+1134,2025-Q2,APAC,Northwind Analytics,Enterprise,56959.57,False,0.0,S. Novak
+1135,2025-Q2,APAC,Northwind Analytics,Business,35488.55,True,16965.4,T. Owusu
+1136,2025-Q2,APAC,Northwind Analytics,Business,39498.08,False,0.0,T. Owusu
+1137,2025-Q2,APAC,Northwind Analytics,Enterprise,58993.62,False,0.0,R. Kapoor
+1138,2025-Q2,APAC,Northwind Analytics,Enterprise,70147.99,False,0.0,T. Owusu
+1139,2025-Q2,APAC,Northwind Analytics,Business,36557.14,False,0.0,K. Tanaka
+1140,2025-Q2,APAC,Northwind Analytics,Enterprise,50956.71,False,0.0,K. Tanaka
+1141,2025-Q2,APAC,Northwind Support Desk,Business,23462.78,False,0.0,T. Owusu
+1142,2025-Q2,APAC,Northwind Support Desk,Enterprise,34879.42,False,0.0,R. Kapoor
+1143,2025-Q2,APAC,Northwind Support Desk,Business,25244.69,False,0.0,R. Kapoor
+1144,2025-Q2,APAC,Northwind Support Desk,Business,22189.67,False,0.0,K. Tanaka
+1145,2025-Q2,APAC,Northwind Support Desk,Enterprise,39517.3,False,0.0,T. Owusu
+1146,2025-Q2,APAC,Northwind Support Desk,Enterprise,39551.22,False,0.0,J. Osei
+1147,2025-Q2,APAC,Northwind Billing Suite,Business,31548.02,False,0.0,S. Novak
+1148,2025-Q2,APAC,Northwind Billing Suite,Business,29746.33,False,0.0,S. Novak
+1149,2025-Q2,APAC,Northwind Billing Suite,Business,28881.95,False,0.0,K. Tanaka
+1150,2025-Q2,APAC,Northwind Billing Suite,Business,25956.94,False,0.0,L. Fernandez
+1151,2025-Q2,APAC,Northwind Billing Suite,Business,32072.37,False,0.0,R. Kapoor
+1152,2025-Q2,LATAM,Northwind CRM,Enterprise,78448.39,False,0.0,R. Kapoor
+1153,2025-Q2,LATAM,Northwind CRM,Business,47864.43,False,0.0,A. Mehta
+1154,2025-Q2,LATAM,Northwind CRM,Business,50803.51,False,0.0,T. Owusu
+1155,2025-Q2,LATAM,Northwind Analytics,Enterprise,62186.44,False,0.0,T. Owusu
+1156,2025-Q2,LATAM,Northwind Analytics,Business,39558.37,False,0.0,T. Owusu
+1157,2025-Q2,LATAM,Northwind Analytics,Business,28036.4,False,0.0,A. Mehta
+1158,2025-Q2,LATAM,Northwind Support Desk,Business,22577.85,False,0.0,K. Tanaka
+1159,2025-Q2,LATAM,Northwind Support Desk,Business,24271.32,False,0.0,K. Tanaka
+1160,2025-Q2,LATAM,Northwind Support Desk,Enterprise,37881.32,False,0.0,R. Kapoor
+1161,2025-Q2,LATAM,Northwind Support Desk,Enterprise,47099.27,False,0.0,A. Mehta
+1162,2025-Q2,LATAM,Northwind Billing Suite,Enterprise,44840.55,False,0.0,K. Tanaka
+1163,2025-Q2,LATAM,Northwind Billing Suite,Business,24709.3,False,0.0,J. Osei
+1164,2025-Q2,LATAM,Northwind Billing Suite,Business,28375.4,False,0.0,T. Owusu
+1165,2025-Q2,LATAM,Northwind Billing Suite,Business,26392.53,False,0.0,T. Owusu
+1166,2025-Q2,LATAM,Northwind Billing Suite,Business,26414.35,False,0.0,K. Tanaka
+1167,2025-Q2,LATAM,Northwind Billing Suite,Business,29899.1,False,0.0,R. Kapoor
+1168,2025-Q2,LATAM,Northwind Billing Suite,Enterprise,44279.62,False,0.0,R. Kapoor
+1169,2025-Q3,North America,Northwind CRM,Enterprise,87292.31,False,0.0,J. Osei
+1170,2025-Q3,North America,Northwind CRM,Business,43723.64,False,0.0,R. Kapoor
+1171,2025-Q3,North America,Northwind CRM,Business,47138.31,False,0.0,A. Mehta
+1172,2025-Q3,North America,Northwind CRM,Enterprise,92648.9,False,0.0,A. Mehta
+1173,2025-Q3,North America,Northwind CRM,Business,55564.4,False,0.0,A. Mehta
+1174,2025-Q3,North America,Northwind CRM,Enterprise,90631.92,False,0.0,A. Mehta
+1175,2025-Q3,North America,Northwind CRM,Enterprise,74526.18,False,0.0,T. Owusu
+1176,2025-Q3,North America,Northwind Analytics,Business,34692.22,False,0.0,T. Owusu
+1177,2025-Q3,North America,Northwind Analytics,Enterprise,59789.04,False,0.0,S. Novak
+1178,2025-Q3,North America,Northwind Analytics,Enterprise,68722.17,False,0.0,T. Owusu
+1179,2025-Q3,North America,Northwind Analytics,Business,39298.48,False,0.0,A. Mehta
+1180,2025-Q3,North America,Northwind Analytics,Business,31225.82,False,0.0,M. Dubois
+1181,2025-Q3,North America,Northwind Support Desk,Enterprise,32147.4,False,0.0,T. Owusu
+1182,2025-Q3,North America,Northwind Support Desk,Business,19425.69,False,0.0,T. Owusu
+1183,2025-Q3,North America,Northwind Support Desk,Enterprise,43621.06,False,0.0,L. Fernandez
+1184,2025-Q3,North America,Northwind Support Desk,Enterprise,38754.32,False,0.0,J. Osei
+1185,2025-Q3,North America,Northwind Support Desk,Business,23142.19,False,0.0,L. Fernandez
+1186,2025-Q3,North America,Northwind Support Desk,Business,17964.87,False,0.0,K. Tanaka
+1187,2025-Q3,North America,Northwind Support Desk,Enterprise,45933.5,False,0.0,J. Osei
+1188,2025-Q3,North America,Northwind Billing Suite,Enterprise,52887.25,False,0.0,R. Kapoor
+1189,2025-Q3,North America,Northwind Billing Suite,Business,29204.0,False,0.0,T. Owusu
+1190,2025-Q3,North America,Northwind Billing Suite,Business,28096.16,False,0.0,L. Fernandez
+1191,2025-Q3,North America,Northwind Billing Suite,Enterprise,48409.15,False,0.0,M. Dubois
+1192,2025-Q3,North America,Northwind Billing Suite,Business,32622.43,False,0.0,A. Mehta
+1193,2025-Q3,North America,Northwind Billing Suite,Business,27143.83,False,0.0,T. Owusu
+1194,2025-Q3,North America,Northwind Billing Suite,Enterprise,51842.4,False,0.0,S. Novak
+1195,2025-Q3,North America,Northwind Billing Suite,Business,29886.42,False,0.0,S. Novak
+1196,2025-Q3,EMEA,Northwind CRM,Enterprise,76587.3,False,0.0,M. Dubois
+1197,2025-Q3,EMEA,Northwind CRM,Business,51654.69,False,0.0,M. Dubois
+1198,2025-Q3,EMEA,Northwind CRM,Business,50196.4,False,0.0,L. Fernandez
+1199,2025-Q3,EMEA,Northwind CRM,Business,38916.35,False,0.0,S. Novak
+1200,2025-Q3,EMEA,Northwind Analytics,Enterprise,59104.66,False,0.0,T. Owusu
+1201,2025-Q3,EMEA,Northwind Analytics,Business,29045.19,False,0.0,L. Fernandez
+1202,2025-Q3,EMEA,Northwind Analytics,Business,37203.52,False,0.0,M. Dubois
+1203,2025-Q3,EMEA,Northwind Support Desk,Business,20609.95,False,0.0,M. Dubois
+1204,2025-Q3,EMEA,Northwind Support Desk,Enterprise,41607.2,False,0.0,T. Owusu
+1205,2025-Q3,EMEA,Northwind Support Desk,Enterprise,32672.79,False,0.0,R. Kapoor
+1206,2025-Q3,EMEA,Northwind Support Desk,Enterprise,43421.11,False,0.0,J. Osei
+1207,2025-Q3,EMEA,Northwind Support Desk,Enterprise,42772.83,False,0.0,L. Fernandez
+1208,2025-Q3,EMEA,Northwind Support Desk,Enterprise,45789.77,True,37388.68,R. Kapoor
+1209,2025-Q3,EMEA,Northwind Support Desk,Business,21467.77,False,0.0,M. Dubois
+1210,2025-Q3,EMEA,Northwind Support Desk,Business,24507.16,False,0.0,J. Osei
+1211,2025-Q3,EMEA,Northwind Billing Suite,Enterprise,55333.36,False,0.0,L. Fernandez
+1212,2025-Q3,EMEA,Northwind Billing Suite,Business,30944.53,False,0.0,A. Mehta
+1213,2025-Q3,EMEA,Northwind Billing Suite,Enterprise,52219.51,False,0.0,L. Fernandez
+1214,2025-Q3,EMEA,Northwind Billing Suite,Business,34386.64,False,0.0,R. Kapoor
+1215,2025-Q3,EMEA,Northwind Billing Suite,Enterprise,51394.07,False,0.0,R. Kapoor
+1216,2025-Q3,EMEA,Northwind Billing Suite,Business,28108.56,False,0.0,K. Tanaka
+1217,2025-Q3,EMEA,Northwind Billing Suite,Business,27820.34,False,0.0,R. Kapoor
+1218,2025-Q3,APAC,Northwind CRM,Enterprise,90176.65,False,0.0,A. Mehta
+1219,2025-Q3,APAC,Northwind CRM,Enterprise,92993.58,False,0.0,R. Kapoor
+1220,2025-Q3,APAC,Northwind CRM,Enterprise,76305.84,False,0.0,K. Tanaka
+1221,2025-Q3,APAC,Northwind Analytics,Business,30408.02,False,0.0,L. Fernandez
+1222,2025-Q3,APAC,Northwind Analytics,Enterprise,69774.42,False,0.0,R. Kapoor
+1223,2025-Q3,APAC,Northwind Analytics,Enterprise,49728.72,False,0.0,L. Fernandez
+1224,2025-Q3,APAC,Northwind Analytics,Business,30977.41,False,0.0,L. Fernandez
+1225,2025-Q3,APAC,Northwind Analytics,Business,37267.36,False,0.0,S. Novak
+1226,2025-Q3,APAC,Northwind Analytics,Business,38892.63,False,0.0,R. Kapoor
+1227,2025-Q3,APAC,Northwind Analytics,Enterprise,70714.09,False,0.0,R. Kapoor
+1228,2025-Q3,APAC,Northwind Analytics,Enterprise,56764.0,False,0.0,J. Osei
+1229,2025-Q3,APAC,Northwind Support Desk,Enterprise,35541.29,False,0.0,M. Dubois
+1230,2025-Q3,APAC,Northwind Support Desk,Enterprise,44295.37,False,0.0,M. Dubois
+1231,2025-Q3,APAC,Northwind Support Desk,Business,22357.21,False,0.0,R. Kapoor
+1232,2025-Q3,APAC,Northwind Support Desk,Business,24758.31,False,0.0,J. Osei
+1233,2025-Q3,APAC,Northwind Billing Suite,Business,24080.28,False,0.0,S. Novak
+1234,2025-Q3,APAC,Northwind Billing Suite,Enterprise,47302.76,False,0.0,T. Owusu
+1235,2025-Q3,APAC,Northwind Billing Suite,Enterprise,48932.15,False,0.0,L. Fernandez
+1236,2025-Q3,APAC,Northwind Billing Suite,Business,24216.78,False,0.0,J. Osei
+1237,2025-Q3,APAC,Northwind Billing Suite,Business,33737.3,False,0.0,T. Owusu
+1238,2025-Q3,APAC,Northwind Billing Suite,Business,34433.06,False,0.0,M. Dubois
+1239,2025-Q3,APAC,Northwind Billing Suite,Business,31937.91,False,0.0,J. Osei
+1240,2025-Q3,APAC,Northwind Billing Suite,Enterprise,55251.55,False,0.0,R. Kapoor
+1241,2025-Q3,LATAM,Northwind CRM,Enterprise,75889.54,False,0.0,K. Tanaka
+1242,2025-Q3,LATAM,Northwind CRM,Enterprise,72069.09,False,0.0,S. Novak
+1243,2025-Q3,LATAM,Northwind CRM,Business,43215.87,False,0.0,T. Owusu
+1244,2025-Q3,LATAM,Northwind Analytics,Enterprise,63744.87,False,0.0,A. Mehta
+1245,2025-Q3,LATAM,Northwind Analytics,Business,31468.92,False,0.0,K. Tanaka
+1246,2025-Q3,LATAM,Northwind Analytics,Business,36994.01,False,0.0,K. Tanaka
+1247,2025-Q3,LATAM,Northwind Support Desk,Business,19089.46,False,0.0,A. Mehta
+1248,2025-Q3,LATAM,Northwind Support Desk,Business,26115.84,False,0.0,R. Kapoor
+1249,2025-Q3,LATAM,Northwind Support Desk,Enterprise,33792.09,False,0.0,L. Fernandez
+1250,2025-Q3,LATAM,Northwind Support Desk,Business,24485.87,False,0.0,S. Novak
+1251,2025-Q3,LATAM,Northwind Billing Suite,Business,24386.87,False,0.0,J. Osei
+1252,2025-Q3,LATAM,Northwind Billing Suite,Enterprise,52441.12,False,0.0,J. Osei
+1253,2025-Q3,LATAM,Northwind Billing Suite,Business,26281.36,False,0.0,R. Kapoor
+1254,2025-Q4,North America,Northwind CRM,Enterprise,69859.28,False,0.0,M. Dubois
+1255,2025-Q4,North America,Northwind CRM,Business,40193.31,False,0.0,T. Owusu
+1256,2025-Q4,North America,Northwind CRM,Business,39704.23,False,0.0,J. Osei
+1257,2025-Q4,North America,Northwind CRM,Business,49487.71,False,0.0,S. Novak
+1258,2025-Q4,North America,Northwind CRM,Business,49003.05,False,0.0,M. Dubois
+1259,2025-Q4,North America,Northwind CRM,Business,50882.03,False,0.0,K. Tanaka
+1260,2025-Q4,North America,Northwind Analytics,Business,30124.72,False,0.0,T. Owusu
+1261,2025-Q4,North America,Northwind Analytics,Business,36539.04,False,0.0,S. Novak
+1262,2025-Q4,North America,Northwind Analytics,Enterprise,57583.9,False,0.0,T. Owusu
+1263,2025-Q4,North America,Northwind Analytics,Business,37846.68,False,0.0,J. Osei
+1264,2025-Q4,North America,Northwind Analytics,Enterprise,57545.78,False,0.0,A. Mehta
+1265,2025-Q4,North America,Northwind Analytics,Business,34388.31,False,0.0,J. Osei
+1266,2025-Q4,North America,Northwind Support Desk,Business,23438.86,False,0.0,A. Mehta
+1267,2025-Q4,North America,Northwind Support Desk,Enterprise,41208.2,False,0.0,K. Tanaka
+1268,2025-Q4,North America,Northwind Support Desk,Business,21900.39,False,0.0,S. Novak
+1269,2025-Q4,North America,Northwind Support Desk,Enterprise,37687.52,False,0.0,K. Tanaka
+1270,2025-Q4,North America,Northwind Support Desk,Enterprise,44908.75,False,0.0,A. Mehta
+1271,2025-Q4,North America,Northwind Support Desk,Enterprise,42076.41,False,0.0,A. Mehta
+1272,2025-Q4,North America,Northwind Billing Suite,Business,32338.99,False,0.0,S. Novak
+1273,2025-Q4,North America,Northwind Billing Suite,Business,33542.46,False,0.0,M. Dubois
+1274,2025-Q4,North America,Northwind Billing Suite,Business,32098.85,False,0.0,J. Osei
+1275,2025-Q4,North America,Northwind Billing Suite,Enterprise,47177.08,False,0.0,S. Novak
+1276,2025-Q4,EMEA,Northwind CRM,Business,51238.73,False,0.0,J. Osei
+1277,2025-Q4,EMEA,Northwind CRM,Enterprise,73890.79,False,0.0,A. Mehta
+1278,2025-Q4,EMEA,Northwind CRM,Enterprise,77666.13,False,0.0,T. Owusu
+1279,2025-Q4,EMEA,Northwind CRM,Enterprise,82269.55,False,0.0,J. Osei
+1280,2025-Q4,EMEA,Northwind Analytics,Business,30825.55,False,0.0,T. Owusu
+1281,2025-Q4,EMEA,Northwind Analytics,Business,31147.77,False,0.0,A. Mehta
+1282,2025-Q4,EMEA,Northwind Analytics,Business,31058.17,False,0.0,L. Fernandez
+1283,2025-Q4,EMEA,Northwind Analytics,Enterprise,55628.86,False,0.0,T. Owusu
+1284,2025-Q4,EMEA,Northwind Analytics,Enterprise,53008.01,False,0.0,K. Tanaka
+1285,2025-Q4,EMEA,Northwind Support Desk,Business,23461.6,False,0.0,M. Dubois
+1286,2025-Q4,EMEA,Northwind Support Desk,Enterprise,32769.61,True,30444.48,S. Novak
+1287,2025-Q4,EMEA,Northwind Support Desk,Business,22666.56,False,0.0,M. Dubois
+1288,2025-Q4,EMEA,Northwind Support Desk,Business,21252.27,False,0.0,L. Fernandez
+1289,2025-Q4,EMEA,Northwind Support Desk,Enterprise,41476.05,False,0.0,S. Novak
+1290,2025-Q4,EMEA,Northwind Support Desk,Business,24943.67,False,0.0,M. Dubois
+1291,2025-Q4,EMEA,Northwind Support Desk,Business,21174.44,False,0.0,S. Novak
+1292,2025-Q4,EMEA,Northwind Billing Suite,Business,25683.09,False,0.0,J. Osei
+1293,2025-Q4,EMEA,Northwind Billing Suite,Business,25971.72,False,0.0,S. Novak
+1294,2025-Q4,EMEA,Northwind Billing Suite,Enterprise,59350.0,False,0.0,K. Tanaka
+1295,2025-Q4,EMEA,Northwind Billing Suite,Business,26666.84,False,0.0,L. Fernandez
+1296,2025-Q4,APAC,Northwind CRM,Business,55373.26,False,0.0,T. Owusu
+1297,2025-Q4,APAC,Northwind CRM,Enterprise,93470.02,False,0.0,S. Novak
+1298,2025-Q4,APAC,Northwind CRM,Enterprise,89171.84,False,0.0,J. Osei
+1299,2025-Q4,APAC,Northwind CRM,Business,49614.93,False,0.0,A. Mehta
+1300,2025-Q4,APAC,Northwind CRM,Business,39585.43,False,0.0,A. Mehta
+1301,2025-Q4,APAC,Northwind CRM,Business,53220.54,False,0.0,J. Osei
+1302,2025-Q4,APAC,Northwind CRM,Enterprise,85279.0,False,0.0,A. Mehta
+1303,2025-Q4,APAC,Northwind CRM,Business,52826.69,False,0.0,S. Novak
+1304,2025-Q4,APAC,Northwind Analytics,Business,29131.02,False,0.0,J. Osei
+1305,2025-Q4,APAC,Northwind Analytics,Enterprise,68253.17,False,0.0,J. Osei
+1306,2025-Q4,APAC,Northwind Analytics,Business,29408.75,False,0.0,T. Owusu
+1307,2025-Q4,APAC,Northwind Analytics,Enterprise,61034.54,False,0.0,S. Novak
+1308,2025-Q4,APAC,Northwind Analytics,Business,30821.04,False,0.0,S. Novak
+1309,2025-Q4,APAC,Northwind Analytics,Enterprise,50166.5,False,0.0,S. Novak
+1310,2025-Q4,APAC,Northwind Analytics,Business,28409.68,False,0.0,R. Kapoor
+1311,2025-Q4,APAC,Northwind Support Desk,Enterprise,42057.25,False,0.0,L. Fernandez
+1312,2025-Q4,APAC,Northwind Support Desk,Business,22745.01,False,0.0,S. Novak
+1313,2025-Q4,APAC,Northwind Support Desk,Business,23360.86,False,0.0,L. Fernandez
+1314,2025-Q4,APAC,Northwind Support Desk,Business,25729.22,False,0.0,M. Dubois
+1315,2025-Q4,APAC,Northwind Support Desk,Enterprise,37096.57,False,0.0,J. Osei
+1316,2025-Q4,APAC,Northwind Billing Suite,Enterprise,53091.13,True,20067.36,K. Tanaka
+1317,2025-Q4,APAC,Northwind Billing Suite,Business,32380.95,False,0.0,L. Fernandez
+1318,2025-Q4,APAC,Northwind Billing Suite,Business,27112.87,False,0.0,A. Mehta
+1319,2025-Q4,APAC,Northwind Billing Suite,Enterprise,60508.08,False,0.0,M. Dubois
+1320,2025-Q4,APAC,Northwind Billing Suite,Business,25825.47,False,0.0,L. Fernandez
+1321,2025-Q4,APAC,Northwind Billing Suite,Enterprise,43720.84,False,0.0,K. Tanaka
+1322,2025-Q4,APAC,Northwind Billing Suite,Enterprise,55149.6,False,0.0,T. Owusu
+1323,2025-Q4,APAC,Northwind Billing Suite,Business,26478.69,False,0.0,T. Owusu
+1324,2025-Q4,LATAM,Northwind CRM,Business,55298.34,False,0.0,T. Owusu
+1325,2025-Q4,LATAM,Northwind CRM,Enterprise,94061.22,False,0.0,M. Dubois
+1326,2025-Q4,LATAM,Northwind CRM,Enterprise,95317.28,False,0.0,L. Fernandez
+1327,2025-Q4,LATAM,Northwind CRM,Enterprise,70540.63,False,0.0,S. Novak
+1328,2025-Q4,LATAM,Northwind Analytics,Enterprise,65350.68,False,0.0,J. Osei
+1329,2025-Q4,LATAM,Northwind Analytics,Business,36967.9,False,0.0,L. Fernandez
+1330,2025-Q4,LATAM,Northwind Analytics,Enterprise,51073.08,False,0.0,T. Owusu
+1331,2025-Q4,LATAM,Northwind Analytics,Enterprise,70398.07,False,0.0,M. Dubois
+1332,2025-Q4,LATAM,Northwind Analytics,Business,30217.96,False,0.0,S. Novak
+1333,2025-Q4,LATAM,Northwind Analytics,Business,31279.17,False,0.0,S. Novak
+1334,2025-Q4,LATAM,Northwind Analytics,Enterprise,52130.29,False,0.0,T. Owusu
+1335,2025-Q4,LATAM,Northwind Support Desk,Enterprise,43603.68,False,0.0,A. Mehta
+1336,2025-Q4,LATAM,Northwind Support Desk,Enterprise,32417.34,False,0.0,L. Fernandez
+1337,2025-Q4,LATAM,Northwind Support Desk,Business,23958.77,False,0.0,J. Osei
+1338,2025-Q4,LATAM,Northwind Support Desk,Enterprise,35723.12,False,0.0,K. Tanaka
+1339,2025-Q4,LATAM,Northwind Support Desk,Business,24518.75,False,0.0,J. Osei
+1340,2025-Q4,LATAM,Northwind Support Desk,Enterprise,39687.42,False,0.0,K. Tanaka
+1341,2025-Q4,LATAM,Northwind Support Desk,Enterprise,36534.03,True,15254.22,M. Dubois
+1342,2025-Q4,LATAM,Northwind Support Desk,Business,23463.01,False,0.0,S. Novak
+1343,2025-Q4,LATAM,Northwind Billing Suite,Enterprise,53808.69,False,0.0,A. Mehta
+1344,2025-Q4,LATAM,Northwind Billing Suite,Business,29065.51,False,0.0,S. Novak
+1345,2025-Q4,LATAM,Northwind Billing Suite,Business,23981.91,False,0.0,S. Novak
+1346,2026-Q1,North America,Northwind CRM,Enterprise,89205.53,False,0.0,S. Novak
+1347,2026-Q1,North America,Northwind CRM,Business,44591.38,False,0.0,L. Fernandez
+1348,2026-Q1,North America,Northwind CRM,Enterprise,91033.72,False,0.0,T. Owusu
+1349,2026-Q1,North America,Northwind CRM,Enterprise,95142.52,False,0.0,T. Owusu
+1350,2026-Q1,North America,Northwind Analytics,Business,27760.72,False,0.0,A. Mehta
+1351,2026-Q1,North America,Northwind Analytics,Business,31168.97,False,0.0,T. Owusu
+1352,2026-Q1,North America,Northwind Analytics,Business,36842.12,False,0.0,S. Novak
+1353,2026-Q1,North America,Northwind Support Desk,Enterprise,37148.7,False,0.0,S. Novak
+1354,2026-Q1,North America,Northwind Support Desk,Business,21210.18,False,0.0,M. Dubois
+1355,2026-Q1,North America,Northwind Support Desk,Business,19419.26,False,0.0,S. Novak
+1356,2026-Q1,North America,Northwind Billing Suite,Business,24725.25,False,0.0,M. Dubois
+1357,2026-Q1,North America,Northwind Billing Suite,Enterprise,59418.4,False,0.0,S. Novak
+1358,2026-Q1,North America,Northwind Billing Suite,Business,27472.7,False,0.0,T. Owusu
+1359,2026-Q1,North America,Northwind Billing Suite,Enterprise,51430.5,False,0.0,S. Novak
+1360,2026-Q1,North America,Northwind Billing Suite,Business,31940.32,False,0.0,M. Dubois
+1361,2026-Q1,North America,Northwind Billing Suite,Business,34776.31,False,0.0,J. Osei
+1362,2026-Q1,North America,Northwind Billing Suite,Enterprise,51029.2,False,0.0,L. Fernandez
+1363,2026-Q1,EMEA,Northwind CRM,Business,49186.31,False,0.0,A. Mehta
+1364,2026-Q1,EMEA,Northwind CRM,Business,42497.92,False,0.0,S. Novak
+1365,2026-Q1,EMEA,Northwind CRM,Business,48460.4,False,0.0,T. Owusu
+1366,2026-Q1,EMEA,Northwind Analytics,Business,36967.48,False,0.0,S. Novak
+1367,2026-Q1,EMEA,Northwind Analytics,Business,35514.38,False,0.0,J. Osei
+1368,2026-Q1,EMEA,Northwind Analytics,Business,29581.42,False,0.0,J. Osei
+1369,2026-Q1,EMEA,Northwind Analytics,Business,30531.71,False,0.0,R. Kapoor
+1370,2026-Q1,EMEA,Northwind Analytics,Enterprise,71968.41,False,0.0,L. Fernandez
+1371,2026-Q1,EMEA,Northwind Support Desk,Business,25398.9,False,0.0,J. Osei
+1372,2026-Q1,EMEA,Northwind Support Desk,Enterprise,46759.53,False,0.0,S. Novak
+1373,2026-Q1,EMEA,Northwind Support Desk,Enterprise,40445.96,False,0.0,R. Kapoor
+1374,2026-Q1,EMEA,Northwind Billing Suite,Enterprise,61534.86,False,0.0,S. Novak
+1375,2026-Q1,EMEA,Northwind Billing Suite,Business,25159.26,False,0.0,L. Fernandez
+1376,2026-Q1,EMEA,Northwind Billing Suite,Business,29333.05,False,0.0,S. Novak
+1377,2026-Q1,EMEA,Northwind Billing Suite,Business,34809.73,False,0.0,J. Osei
+1378,2026-Q1,APAC,Northwind CRM,Business,56242.71,False,0.0,M. Dubois
+1379,2026-Q1,APAC,Northwind CRM,Enterprise,95526.2,False,0.0,S. Novak
+1380,2026-Q1,APAC,Northwind CRM,Enterprise,83429.17,False,0.0,S. Novak
+1381,2026-Q1,APAC,Northwind Analytics,Enterprise,66937.26,False,0.0,L. Fernandez
+1382,2026-Q1,APAC,Northwind Analytics,Enterprise,51932.92,False,0.0,A. Mehta
+1383,2026-Q1,APAC,Northwind Analytics,Enterprise,60897.07,False,0.0,L. Fernandez
+1384,2026-Q1,APAC,Northwind Analytics,Business,36279.45,False,0.0,R. Kapoor
+1385,2026-Q1,APAC,Northwind Support Desk,Business,23184.48,False,0.0,L. Fernandez
+1386,2026-Q1,APAC,Northwind Support Desk,Enterprise,41420.16,False,0.0,L. Fernandez
+1387,2026-Q1,APAC,Northwind Support Desk,Business,22727.43,False,0.0,S. Novak
+1388,2026-Q1,APAC,Northwind Billing Suite,Business,33474.35,False,0.0,R. Kapoor
+1389,2026-Q1,APAC,Northwind Billing Suite,Enterprise,58301.89,False,0.0,A. Mehta
+1390,2026-Q1,APAC,Northwind Billing Suite,Business,30824.24,False,0.0,R. Kapoor
+1391,2026-Q1,APAC,Northwind Billing Suite,Business,32812.51,False,0.0,R. Kapoor
+1392,2026-Q1,APAC,Northwind Billing Suite,Business,31512.47,False,0.0,M. Dubois
+1393,2026-Q1,APAC,Northwind Billing Suite,Business,26085.06,False,0.0,S. Novak
+1394,2026-Q1,APAC,Northwind Billing Suite,Enterprise,49277.42,False,0.0,S. Novak
+1395,2026-Q1,LATAM,Northwind CRM,Business,44919.72,False,0.0,S. Novak
+1396,2026-Q1,LATAM,Northwind CRM,Business,40455.39,False,0.0,L. Fernandez
+1397,2026-Q1,LATAM,Northwind CRM,Business,43473.82,False,0.0,M. Dubois
+1398,2026-Q1,LATAM,Northwind CRM,Business,53825.54,False,0.0,S. Novak
+1399,2026-Q1,LATAM,Northwind CRM,Enterprise,92214.56,False,0.0,L. Fernandez
+1400,2026-Q1,LATAM,Northwind CRM,Business,47515.05,False,0.0,R. Kapoor
+1401,2026-Q1,LATAM,Northwind Analytics,Business,39298.98,False,0.0,K. Tanaka
+1402,2026-Q1,LATAM,Northwind Analytics,Business,31717.06,True,17298.64,T. Owusu
+1403,2026-Q1,LATAM,Northwind Analytics,Business,27304.67,False,0.0,L. Fernandez
+1404,2026-Q1,LATAM,Northwind Analytics,Enterprise,65721.79,False,0.0,S. Novak
+1405,2026-Q1,LATAM,Northwind Analytics,Business,27854.82,False,0.0,S. Novak
+1406,2026-Q1,LATAM,Northwind Analytics,Business,28141.21,False,0.0,R. Kapoor
+1407,2026-Q1,LATAM,Northwind Support Desk,Enterprise,33926.42,False,0.0,M. Dubois
+1408,2026-Q1,LATAM,Northwind Support Desk,Business,26139.02,False,0.0,S. Novak
+1409,2026-Q1,LATAM,Northwind Support Desk,Enterprise,35139.76,False,0.0,A. Mehta
+1410,2026-Q1,LATAM,Northwind Support Desk,Business,19001.11,False,0.0,T. Owusu
+1411,2026-Q1,LATAM,Northwind Support Desk,Business,19101.1,False,0.0,L. Fernandez
+1412,2026-Q1,LATAM,Northwind Support Desk,Business,22999.77,False,0.0,R. Kapoor
+1413,2026-Q1,LATAM,Northwind Support Desk,Business,22111.45,False,0.0,T. Owusu
+1414,2026-Q1,LATAM,Northwind Billing Suite,Business,29118.8,True,11592.65,J. Osei
+1415,2026-Q1,LATAM,Northwind Billing Suite,Enterprise,54607.44,False,0.0,A. Mehta
+1416,2026-Q1,LATAM,Northwind Billing Suite,Business,26773.94,False,0.0,K. Tanaka
+1417,2026-Q1,LATAM,Northwind Billing Suite,Enterprise,54603.83,False,0.0,M. Dubois
+1418,2026-Q1,LATAM,Northwind Billing Suite,Business,31424.14,True,29959.29,J. Osei
+1419,2026-Q1,LATAM,Northwind Billing Suite,Business,28739.63,False,0.0,M. Dubois
+1420,2026-Q1,LATAM,Northwind Billing Suite,Enterprise,51113.21,False,0.0,T. Owusu
+1421,2026-Q1,LATAM,Northwind Billing Suite,Enterprise,57674.48,False,0.0,L. Fernandez
+1422,2026-Q2,North America,Northwind CRM,Business,44100.89,False,0.0,M. Dubois
+1423,2026-Q2,North America,Northwind CRM,Business,41367.28,False,0.0,S. Novak
+1424,2026-Q2,North America,Northwind CRM,Business,50415.63,False,0.0,R. Kapoor
+1425,2026-Q2,North America,Northwind CRM,Enterprise,75079.36,False,0.0,R. Kapoor
+1426,2026-Q2,North America,Northwind CRM,Business,55762.39,False,0.0,R. Kapoor
+1427,2026-Q2,North America,Northwind CRM,Enterprise,91213.77,False,0.0,T. Owusu
+1428,2026-Q2,North America,Northwind CRM,Business,55056.61,False,0.0,R. Kapoor
+1429,2026-Q2,North America,Northwind Analytics,Business,35860.76,False,0.0,M. Dubois
+1430,2026-Q2,North America,Northwind Analytics,Enterprise,70954.19,False,0.0,R. Kapoor
+1431,2026-Q2,North America,Northwind Analytics,Business,39428.02,False,0.0,T. Owusu
+1432,2026-Q2,North America,Northwind Analytics,Enterprise,66178.68,False,0.0,R. Kapoor
+1433,2026-Q2,North America,Northwind Analytics,Enterprise,64999.79,False,0.0,K. Tanaka
+1434,2026-Q2,North America,Northwind Support Desk,Business,25453.55,False,0.0,K. Tanaka
+1435,2026-Q2,North America,Northwind Support Desk,Business,21321.73,False,0.0,J. Osei
+1436,2026-Q2,North America,Northwind Support Desk,Enterprise,34208.5,False,0.0,L. Fernandez
+1437,2026-Q2,North America,Northwind Support Desk,Business,25704.27,False,0.0,T. Owusu
+1438,2026-Q2,North America,Northwind Billing Suite,Business,34595.84,False,0.0,A. Mehta
+1439,2026-Q2,North America,Northwind Billing Suite,Enterprise,44643.53,False,0.0,A. Mehta
+1440,2026-Q2,North America,Northwind Billing Suite,Enterprise,46369.31,False,0.0,L. Fernandez
+1441,2026-Q2,North America,Northwind Billing Suite,Enterprise,43572.61,False,0.0,T. Owusu
+1442,2026-Q2,North America,Northwind Billing Suite,Business,32188.84,False,0.0,R. Kapoor
+1443,2026-Q2,North America,Northwind Billing Suite,Enterprise,43026.83,False,0.0,J. Osei
+1444,2026-Q2,North America,Northwind Billing Suite,Enterprise,49594.45,False,0.0,T. Owusu
+1445,2026-Q2,North America,Northwind Billing Suite,Enterprise,45545.47,False,0.0,R. Kapoor
+1446,2026-Q2,EMEA,Northwind CRM,Enterprise,79564.16,False,0.0,R. Kapoor
+1447,2026-Q2,EMEA,Northwind CRM,Enterprise,69306.33,False,0.0,R. Kapoor
+1448,2026-Q2,EMEA,Northwind CRM,Business,51881.09,False,0.0,M. Dubois
+1449,2026-Q2,EMEA,Northwind CRM,Enterprise,85545.09,False,0.0,J. Osei
+1450,2026-Q2,EMEA,Northwind Analytics,Enterprise,59960.54,False,0.0,A. Mehta
+1451,2026-Q2,EMEA,Northwind Analytics,Business,30214.67,False,0.0,S. Novak
+1452,2026-Q2,EMEA,Northwind Analytics,Business,36452.9,True,25091.08,K. Tanaka
+1453,2026-Q2,EMEA,Northwind Analytics,Business,28713.28,False,0.0,M. Dubois
+1454,2026-Q2,EMEA,Northwind Support Desk,Business,25368.99,False,0.0,R. Kapoor
+1455,2026-Q2,EMEA,Northwind Support Desk,Enterprise,41787.32,False,0.0,S. Novak
+1456,2026-Q2,EMEA,Northwind Support Desk,Enterprise,35443.22,False,0.0,L. Fernandez
+1457,2026-Q2,EMEA,Northwind Support Desk,Business,26156.24,False,0.0,T. Owusu
+1458,2026-Q2,EMEA,Northwind Support Desk,Enterprise,44256.16,False,0.0,K. Tanaka
+1459,2026-Q2,EMEA,Northwind Support Desk,Enterprise,41138.71,False,0.0,T. Owusu
+1460,2026-Q2,EMEA,Northwind Support Desk,Business,20888.99,False,0.0,J. Osei
+1461,2026-Q2,EMEA,Northwind Support Desk,Business,22450.25,False,0.0,L. Fernandez
+1462,2026-Q2,EMEA,Northwind Billing Suite,Business,29627.83,False,0.0,K. Tanaka
+1463,2026-Q2,EMEA,Northwind Billing Suite,Enterprise,52694.77,False,0.0,T. Owusu
+1464,2026-Q2,EMEA,Northwind Billing Suite,Enterprise,51981.2,False,0.0,T. Owusu
+1465,2026-Q2,EMEA,Northwind Billing Suite,Business,30058.53,False,0.0,R. Kapoor
+1466,2026-Q2,APAC,Northwind CRM,Business,42830.23,True,12682.51,J. Osei
+1467,2026-Q2,APAC,Northwind CRM,Business,44451.52,False,0.0,A. Mehta
+1468,2026-Q2,APAC,Northwind CRM,Enterprise,71086.22,False,0.0,A. Mehta
+1469,2026-Q2,APAC,Northwind CRM,Business,41489.66,False,0.0,M. Dubois
+1470,2026-Q2,APAC,Northwind CRM,Business,54294.0,False,0.0,M. Dubois
+1471,2026-Q2,APAC,Northwind CRM,Business,50539.15,False,0.0,L. Fernandez
+1472,2026-Q2,APAC,Northwind CRM,Enterprise,80117.74,False,0.0,M. Dubois
+1473,2026-Q2,APAC,Northwind CRM,Business,51351.45,False,0.0,A. Mehta
+1474,2026-Q2,APAC,Northwind Analytics,Enterprise,59627.61,False,0.0,M. Dubois
+1475,2026-Q2,APAC,Northwind Analytics,Business,37739.01,False,0.0,S. Novak
+1476,2026-Q2,APAC,Northwind Analytics,Business,29612.55,False,0.0,J. Osei
+1477,2026-Q2,APAC,Northwind Support Desk,Enterprise,38468.92,False,0.0,A. Mehta
+1478,2026-Q2,APAC,Northwind Support Desk,Business,18415.24,False,0.0,T. Owusu
+1479,2026-Q2,APAC,Northwind Support Desk,Business,23757.6,True,18209.89,M. Dubois
+1480,2026-Q2,APAC,Northwind Billing Suite,Business,26233.42,False,0.0,A. Mehta
+1481,2026-Q2,APAC,Northwind Billing Suite,Business,34927.01,False,0.0,S. Novak
+1482,2026-Q2,APAC,Northwind Billing Suite,Business,32452.43,False,0.0,K. Tanaka
+1483,2026-Q2,APAC,Northwind Billing Suite,Business,25404.52,False,0.0,K. Tanaka
+1484,2026-Q2,APAC,Northwind Billing Suite,Business,26881.72,False,0.0,L. Fernandez
+1485,2026-Q2,APAC,Northwind Billing Suite,Enterprise,51452.36,False,0.0,S. Novak
+1486,2026-Q2,LATAM,Northwind CRM,Enterprise,94310.07,False,0.0,M. Dubois
+1487,2026-Q2,LATAM,Northwind CRM,Business,43647.99,False,0.0,T. Owusu
+1488,2026-Q2,LATAM,Northwind CRM,Business,42306.2,False,0.0,L. Fernandez
+1489,2026-Q2,LATAM,Northwind CRM,Enterprise,98487.61,False,0.0,M. Dubois
+1490,2026-Q2,LATAM,Northwind CRM,Business,40663.67,False,0.0,K. Tanaka
+1491,2026-Q2,LATAM,Northwind CRM,Business,39673.27,False,0.0,S. Novak
+1492,2026-Q2,LATAM,Northwind CRM,Business,51292.52,False,0.0,R. Kapoor
+1493,2026-Q2,LATAM,Northwind CRM,Business,49139.45,True,8132.87,K. Tanaka
+1494,2026-Q2,LATAM,Northwind Analytics,Business,38810.02,False,0.0,A. Mehta
+1495,2026-Q2,LATAM,Northwind Analytics,Business,29632.3,False,0.0,T. Owusu
+1496,2026-Q2,LATAM,Northwind Analytics,Enterprise,64987.23,False,0.0,M. Dubois
+1497,2026-Q2,LATAM,Northwind Analytics,Enterprise,61679.91,False,0.0,M. Dubois
+1498,2026-Q2,LATAM,Northwind Analytics,Business,35503.63,False,0.0,S. Novak
+1499,2026-Q2,LATAM,Northwind Analytics,Business,33565.15,False,0.0,T. Owusu
+1500,2026-Q2,LATAM,Northwind Support Desk,Enterprise,37735.06,False,0.0,K. Tanaka
+1501,2026-Q2,LATAM,Northwind Support Desk,Enterprise,32375.24,False,0.0,M. Dubois
+1502,2026-Q2,LATAM,Northwind Support Desk,Business,19498.01,False,0.0,K. Tanaka
+1503,2026-Q2,LATAM,Northwind Support Desk,Business,23348.71,False,0.0,R. Kapoor
+1504,2026-Q2,LATAM,Northwind Support Desk,Enterprise,39517.95,False,0.0,T. Owusu
+1505,2026-Q2,LATAM,Northwind Billing Suite,Business,32703.73,False,0.0,T. Owusu
+1506,2026-Q2,LATAM,Northwind Billing Suite,Business,33760.88,False,0.0,A. Mehta
+1507,2026-Q2,LATAM,Northwind Billing Suite,Business,33197.57,False,0.0,A. Mehta
+1508,2026-Q2,LATAM,Northwind Billing Suite,Enterprise,51153.83,False,0.0,K. Tanaka
+1509,2026-Q2,LATAM,Northwind Billing Suite,Business,25491.53,False,0.0,T. Owusu
+1510,2026-Q2,LATAM,Northwind Billing Suite,Business,30719.75,False,0.0,T. Owusu

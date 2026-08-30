@@ -1,0 +1,33 @@
+NORTHWIND TECHNOLOGIES — REMOTE WORK POLICY
+Document Owner: Human Resources
+Effective Date: February 1, 2026
+Applies To: All eligible full-time employees
+
+1. PURPOSE
+This policy defines eligibility, expectations, and guidelines for employees working remotely, whether on a hybrid or fully remote basis.
+
+2. ELIGIBILITY
+Remote work eligibility is determined by role type. Roles are classified into three categories:
+- Fully Remote: employee works from a non-office location full-time (e.g., Engineering, Customer Support for approved regions)
+- Hybrid: employee is expected in the office a minimum of 2 days per week (e.g., Sales, Product Management, Marketing)
+- Onsite Required: employee must work from the office full-time due to role requirements (e.g., Facilities, Hardware Lab roles)
+
+New employees must complete a 90-day onboarding period working primarily onsite or hybrid before transitioning to a fully remote arrangement, unless the role was hired as fully remote from the start.
+
+3. HYBRID SCHEDULE EXPECTATIONS
+Hybrid employees must coordinate their in-office days with their team to ensure at least 2 overlapping in-office days per week for team collaboration. Core collaboration hours (10:00 AM–4:00 PM local time) apply to all hybrid and remote employees regardless of location.
+
+4. EQUIPMENT AND EXPENSES
+Northwind Technologies provides a one-time home office setup stipend of $500 for employees approved for fully remote work, covering items such as a monitor, chair, or desk. Ongoing internet costs are reimbursed up to $50/month with a submitted receipt. Company laptops and required software licenses are provided regardless of work location.
+
+5. WORKING FROM ABROAD
+Employees wishing to work remotely from a country other than their contracted country of employment must obtain prior written approval from HR and Legal, due to tax, visa, and data protection implications. Unapproved international remote work is a policy violation and may affect payroll, benefits, and data compliance status.
+
+6. PERFORMANCE AND AVAILABILITY
+Remote and hybrid employees are expected to maintain the same availability, responsiveness, and performance standards as onsite employees. Managers may request a return to onsite work if performance concerns arise that are, in the manager's reasonable judgment, linked to the remote work arrangement.
+
+7. SECURITY REQUIREMENTS
+Remote employees must use company-issued VPN software when accessing internal systems, keep work devices password-protected, and avoid conducting company business over unsecured public Wi-Fi networks. Any lost or stolen company device must be reported to IT Security within 24 hours.
+
+8. POLICY REVIEW
+This policy is reviewed annually and may be adjusted based on business needs, team feedback, and evolving best practices in distributed work.

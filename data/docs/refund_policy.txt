@@ -1,0 +1,39 @@
+NORTHWIND TECHNOLOGIES — ENTERPRISE CUSTOMER REFUND POLICY
+Document Owner: Finance & Customer Success
+Effective Date: March 1, 2026
+Applies To: All enterprise (Business and Enterprise-tier) customer contracts
+
+1. PURPOSE
+This document defines the conditions under which Northwind Technologies issues refunds to enterprise customers for its SaaS subscription products.
+
+2. ELIGIBILITY FOR REFUNDS
+Enterprise customers are eligible for a full refund if a cancellation request is submitted in writing within 30 days of the initial contract signing date ("cooling-off period"). This applies only to a customer's first annual contract term and does not apply to renewals.
+
+After the 30-day cooling-off period, enterprise contracts are non-refundable for the remainder of the current billing cycle, except under the conditions described in Section 3.
+
+3. EXCEPTIONS — PRORATED REFUNDS
+Northwind Technologies will issue a prorated refund (calculated based on unused full months remaining in the contract term) under the following circumstances:
+- Documented, sustained service outage exceeding the Service Level Agreement (SLA) uptime guarantee of 99.5% monthly uptime, verified by Northwind's internal incident reports.
+- Discontinuation of a core product feature that was a material part of the signed contract, without a reasonable substitute offered within 60 days.
+- Company-initiated contract termination for convenience (rare, requires VP-level approval).
+
+Prorated refunds under this section are calculated as: (Remaining full unused months / Total contract months) x Total contract value, less any applied discounts or one-time onboarding fees, which are non-refundable.
+
+4. NON-REFUNDABLE ITEMS
+The following are non-refundable under any circumstances:
+- One-time onboarding and implementation fees
+- Custom integration or professional services fees already delivered
+- Add-on API usage charges already consumed
+- Training and certification program fees
+
+5. REFUND PROCESS
+Refund requests must be submitted via the enterprise support portal or directly to the assigned Customer Success Manager. Approved refunds are processed within 15 business days and issued via the original payment method. Refunds are not available as service credit substitutes unless explicitly requested by the customer.
+
+6. DISPUTE RESOLUTION
+If a customer disagrees with a refund decision, they may escalate to the Finance Escalations team within 14 days of the decision. Escalations are reviewed by a Finance Manager and a written response is provided within 10 business days.
+
+7. QUARTERLY REFUND RATE TARGET
+Northwind Technologies targets an internal refund rate threshold of no more than 3% of total enterprise contract value refunded per quarter. Refund rates exceeding this threshold trigger an internal review by the Finance and Customer Success leadership teams to identify root causes (e.g., onboarding gaps, product issues, pricing mismatches).
+
+8. POLICY REVIEW
+This policy is reviewed semi-annually by Finance leadership and may be amended based on business needs, competitive positioning, or regulatory requirements.
