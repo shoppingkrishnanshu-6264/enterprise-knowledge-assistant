@@ -29,10 +29,19 @@ from src.tools.sql_tool import run_sql_tool
 
 load_dotenv()
 
-MODEL_NAME = "llama-3.3-70b-versatile"
+# Defensively disable LangSmith tracing — if left enabled without a valid setup,
+# it can inject extra request metadata/headers that caused a Unicode encoding crash.
+os.environ["LANGCHAIN_TRACING_V2"] = "false"
+
+MODEL_NAME = "openai/gpt-oss-120b"
 MAX_RETRIES = 2
 
-llm = ChatGroq(model=MODEL_NAME, temperature=0, api_key=os.getenv("GROQ_API_KEY"))
+# Strip any accidental whitespace/hidden characters from the key and enforce plain ASCII,
+# since a stray non-ASCII character in the key or environment previously broke HTTP headers.
+_groq_api_key = os.getenv("GROQ_API_KEY", "").strip()
+_groq_api_key = _groq_api_key.encode("ascii", "ignore").decode("ascii")
+
+llm = ChatGroq(model=MODEL_NAME, temperature=0, api_key=_groq_api_key)
 
 
 # ---------- STATE ----------
@@ -154,7 +163,7 @@ def critic_node(state: AgentState) -> AgentState:
     Sets critic_feedback if not; leaves it empty if evidence passes.
     """
     evidence_summary = "\n".join(
-        f"- [{e['tool']} | {e['source']}]: {str(e['content'])[:300]}"
+        f"- [{e['tool']} | {e['source']}]: {str(e['content'])[:1500]}"
         for e in state["evidence"]
     )
 
@@ -208,7 +217,7 @@ def synthesizer_node(state: AgentState) -> AgentState:
     Combines all evidence into one final, cited answer.
     """
     evidence_block = "\n".join(
-        f"- [Source: {e['source']}]: {str(e['content'])[:500]}"
+        f"- [Source: {e['source']}]: {str(e['content'])[:1500]}"
         for e in state["evidence"]
     )
 
@@ -227,6 +236,19 @@ you MUST work through the comparison explicitly before concluding:
 2. State the direct numeric comparison (e.g., "2.47% is LESS THAN 3%").
 3. Only then state the correct conclusion based on that comparison.
 Do not state a conclusion that contradicts the numbers above it — re-check your comparison direction (greater/less than) before finalizing.
+
+CRITICAL RULE ABOUT MULTIPLE NUMBERS IN THE SAME DOCUMENT:
+A single evidence chunk or document may contain several different numbers that apply to DIFFERENT, UNRELATED
+conditions (e.g., one number for a general rule, a different number for a specific exception case). Before
+using any number, quote the exact sentence it comes from to yourself, and confirm that sentence actually
+answers the question asked. Do NOT combine a number from one clause with a topic/condition from a different
+clause just because they appear in the same chunk or the same document.
+
+Example of what NOT to do: if the evidence says "customers get a refund within 30 days" in one sentence,
+and separately says "no substitute offered within 60 days" in an unrelated sentence about a different topic,
+and the question asks about the general refund period, the correct answer is 30 days — NOT 60 days, and NOT
+a blend of both sentences. Focus on which NUMBER belongs to which CONDITION/TOPIC, based on meaning — not on
+matching exact wording or phrases. Read for what each clause actually means, not for literal keyword matches.
 
 CRITICAL RULE ABOUT NUMBERS FROM SQL EVIDENCE:
 Numeric values in the evidence (especially from "SQL query" sources) are ALREADY in their final form.

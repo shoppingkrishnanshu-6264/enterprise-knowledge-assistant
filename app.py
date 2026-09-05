@@ -17,7 +17,7 @@ from src.agents.graph import ask
 st.set_page_config(page_title="Enterprise Knowledge Assistant", page_icon="🧠", layout="centered")
 
 st.title("🧠 Enterprise Knowledge Assistant")
-st.caption("Agentic RAG over company policies + sales data — powered by a local LLM (Ollama / llama3.1)")
+st.caption("Agentic RAG over company policies + sales data — powered by Groq (openai/gpt-oss-120b)")
 
 # ---------- Session state ----------
 if "messages" not in st.session_state:

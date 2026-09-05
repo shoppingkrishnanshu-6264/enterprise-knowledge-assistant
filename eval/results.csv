@@ -1,91 +1,27 @@
 question,category,answer,ground_truth,retries,faithfulness,faithfulness_reason,answer_relevancy,relevancy_reason
-What is the refund cooling-off period for enterprise customers?,policy_only,"The refund cooling-off period for enterprise customers is 30 days. After this period, enterprise contracts are non-refundable for the remainder of the current billing cycle, except under specific circumstances described in Section 3 of the refund policy document.
+What is the refund cooling-off period for enterprise customers?,policy_only,Enterprise customers have a **30‑day cooling‑off period**—they can request a full refund in writing within 30 days of the initial contract signing date. (Source: refund_policy.txt),Enterprise customers are eligible for a full refund if they cancel in writing within 30 days of the initial contract signing date.,0,1.0,"The answer accurately states that enterprise customers have a 30‑day cooling‑off period and can request a full refund in writing within 30 days of the initial contract signing date, which is directly supported by the evidence.",1.0,"The answer directly states the refund cooling-off period for enterprise customers as 30 days, fully addressing the question without irrelevant information."
+How many days of paid sick leave do employees get per year?,policy_only,Employees receive **12 days of paid sick leave per year**. (Source: leave_policy.txt),Employees are entitled to 12 days of paid sick leave per year.,0,1.0,The answer's claim that employees receive 12 days of paid sick leave per year is directly stated in the evidence (section 2.2 Sick Leave).,1.0,"The answer directly provides the exact number of paid sick leave days per year, fully addressing the question without irrelevant information."
+What is the one-time home office setup stipend for fully remote employees?,policy_only,Northwind Technologies provides a one‑time home‑office‑setup stipend of **$500** for employees who are approved for fully remote work. (Source: remote_work_policy.txt),Northwind Technologies provides a one-time home office setup stipend of $500 for employees approved for fully remote work.,0,1.0,"The answer accurately states the $500 one-time home office stipend for fully remote‑approved employees, which is directly supported by the evidence.",1.0,"The answer directly states the exact amount of the one-time home office setup stipend ($500) for fully remote employees, fully addressing the question without irrelevant information."
+How many weeks of paid maternity leave are eligible employees entitled to?,policy_only,Eligible employees are entitled to **26 weeks of paid maternity leave** (Source: leave_policy.txt).,Eligible employees are entitled to 26 weeks of paid maternity leave.,0,1.0,"The evidence explicitly states that eligible employees are entitled to 26 weeks of paid maternity leave, matching the answer.",1.0,"The answer directly provides the exact number of weeks of paid maternity leave (26 weeks) asked for, with no irrelevant information."
+What is the daily meal allowance cap while traveling for business?,policy_only,"The policy caps the daily meal allowance for business travel at **$75 per day** (breakfast $15, lunch $20, dinner $40, inclusive of tax and tip)【Source: expense_reimbursement_policy.txt】.",The daily meal allowance while traveling is capped at $75/day.,0,1.0,The answer's statement about the $75 daily meal allowance and its breakdown matches the evidence exactly.,1.0,"The answer directly provides the exact daily meal allowance cap and relevant details, fully addressing the question without irrelevant content."
+Within how many days must an expense report be submitted?,policy_only,Expense reports must be submitted **within 30 days** of the expense being incurred. (Source: expense_reimbursement_policy.txt),Expense reports must be submitted within 30 days of the expense being incurred.,0,1.0,The answer's claim that expense reports must be submitted within 30 days is directly stated in the evidence.,1.0,"The answer directly provides the required number of days (30) for submitting an expense report, fully addressing the question without irrelevant information."
+What was the total contract value across all regions in 2025-Q1?,sql_only,"The total contract value across all regions in 2025‑Q1 was **3,746,118.11** USD (Source: SQL query).",This requires summing contract_value_usd for quarter = '2025-Q1' in the sales database.,0,0.5,"The numeric value 3,746,118.11 USD matches the evidence, but the evidence does not confirm the timeframe (2025‑Q1) or that it covers all regions, so only partial support.",1.0,"The answer directly provides the requested total contract value for 2025-Q1 across all regions, with no irrelevant information."
+Which product had the highest total contract value in 2025-Q3?,sql_only,"The product with the highest total contract value in 2025‑Q3 was **Northwind CRM**, with a total contract value of 1,159,530.97 USD (Source: SQL query).",This requires grouping by product for quarter = '2025-Q3' and finding the max total contract_value_usd.,0,0.5,"Evidence confirms the product name and contract value, but does not specify the 2025‑Q3 period or that it was the highest, so only half of the answer's claims are supported.",1.0,"The answer directly names the product with the highest total contract value for 2025-Q3 and provides the specific value, fully addressing the question without irrelevant content."
+What is the overall refund rate across all quarters?,sql_only,The overall refund rate across all quarters is **1.57%** (Source: SQL query).,This requires SUM(refund_amount_usd) / SUM(contract_value_usd) * 100 across the entire sales table.,0,1.0,The answer's statement that the overall refund rate is 1.57% directly matches the evidence provided (refund_rate: 1.57).,1.0,"The answer directly provides the overall refund rate across all quarters, exactly addressing the question without irrelevant information."
+How does our Q2 2025 refund rate compare to our stated refund policy threshold?,multi_hop,"**Actual Q2 2025 refund rate:** 2.47% (Source: SQL query)  
+**Policy threshold:** 3% (Source: refund_policy.txt)
 
-(Source: refund_policy.txt)",Enterprise customers are eligible for a full refund if they cancel in writing within 30 days of the initial contract signing date.,1,1.0,"The answer accurately states that the refund cooling-off period is 30 days and that enterprise contracts are non-refundable after this period, except under specific circumstances described in Section 3.",1.0,The answer directly addresses the question and provides a clear time frame for the refund cooling-off period.
-How many days of paid sick leave do employees get per year?,policy_only,"According to the leave policy (Source: leave_policy.txt), employees are entitled to 12 days of paid sick leave per year. 
+**Numeric comparison:** 2.47% is **LESS THAN** 3%.
 
-There is no mention of any cap on this number, unlike the maximum of 5 days that can be carried over from one year to the next (Source: leave_policy.txt).",Employees are entitled to 12 days of paid sick leave per year.,1,0.0,"The answer contradicts the evidence by stating there is no cap on paid sick leave per year, when in fact the policy states that any balance beyond a maximum of 5 days carried over from one year to the next is forfeited.",1.0,The answer directly addresses the question and provides a specific number of paid sick leave days per year.
-What is the one-time home office setup stipend for fully remote employees?,policy_only,"The one-time home office setup stipend for fully remote employees is $500. 
+**Conclusion:** The Q2 2025 refund rate of 2.47% is below the internal refund‑rate threshold of 3%, so it does not trigger the automatic review stipulated in the refund policy.",The Q2 2025 refund rate (approximately 2.47%) is below the internal refund rate threshold of 3% stated in the refund policy.,0,1.0,"All factual statements (refund rate value, policy threshold, comparison, and conclusion about triggering review) are directly supported by the provided evidence.",1.0,"The answer directly provides the Q2 2025 refund rate, the policy threshold, compares them, and concludes how they relate, fully addressing the question without irrelevant content."
+Is our 2025-Q4 refund rate within the threshold defined in the refund policy?,multi_hop,"**Actual 2025‑Q4 refund rate:** 1.63% (Source: SQL query)  
+**Policy threshold:** no more than 3% per quarter (Source: refund_policy.txt)
 
-(Source: remote_work_policy.txt): UIPMENT AND EXPENSES
-Northwind Technologies provides a one-time home office setup stipend of $500 for employees approved for fully remote work, covering items such as a monitor, chair, or desk.
+**Comparison:** 1.63% is **LESS THAN** 3%.
 
-This amount remains the same in another section of the policy document:
+**Conclusion:** The 2025‑Q4 refund rate is within the threshold defined in the refund policy.",This requires comparing the calculated 2025-Q4 refund rate against the 3% threshold stated in refund_policy.txt.,0,1.0,"All claims (refund rate of 1.63%, policy threshold of ≤3%, and the conclusion that 1.63% is below the threshold) are directly supported by the provided evidence.",1.0,"The answer directly provides the 2025-Q4 refund rate, the policy threshold, compares them, and states that the rate is within the threshold, fully addressing the question."
+"If an enterprise customer's refund exceeds our internal quarterly threshold, what does policy say should happen, and was that threshold exceeded in 2026-Q1?",multi_hop,"The refund policy states that **if the refund amount for an enterprise customer exceeds the internal quarterly threshold of 3 % of total enterprise contract value, an internal review by the Finance and Customer Success leadership teams must be initiated** (Source: refund_policy.txt).
 
-(Source: remote_work_policy.txt): NORTHWIND TECHNOLOGIES — REMOTE WORK POLICY
-Document Owner: Human Resources
-Effective Date: February 1, 2026
-Applies To: All eligible full-time employees
+For 2026‑Q1 the data shows a **total enterprise refund amount of $0.0** (Source: SQL query). The policy threshold is expressed as a **percentage (3 %) of total contract value**, and the evidence does not provide the total enterprise contract value for that quarter. Because the refund rate (refund amount ÷ contract value) cannot be calculated from the available data, we cannot determine whether the 3 % threshold was exceeded in 2026‑Q1. 
 
-... Northwind Technologies provides a one-time home office setup stipend of $500 for employees approved for fully remote work, covering items such as a monitor, chair, or desk.",Northwind Technologies provides a one-time home office setup stipend of $500 for employees approved for fully remote work.,0,1.0,"The answer is entirely supported by the evidence, and there are no factual claims that contradict it.",1.0,The answer directly and completely addresses the question by providing the specific amount of the one-time home office setup stipend for fully remote employees.
-How many weeks of paid maternity leave are eligible employees entitled to?,policy_only,"To determine how many weeks of paid maternity leave eligible employees are entitled to, we need to look at the evidence provided in 2.3 Maternity Leave and 2.5 Bereavement Leave is not relevant here.
-
-According to 2.3 Maternity Leave (Source: leave_policy.txt), eligible employees are entitled to 26 weeks of paid maternity leave. However, it also states that maternity leave may begin up to 8 weeks before the expected delivery date. This does not imply a reduction in total entitlement, but rather flexibility in when the leave can be taken.
-
-Therefore, the correct answer is:
-
-Eligible employees are entitled to 26 weeks of paid maternity leave (Source: leave_policy.txt).",Eligible employees are entitled to 26 weeks of paid maternity leave.,2,1.0,The answer accurately states that eligible employees are entitled to 26 weeks of paid maternity leave and correctly interprets the flexibility in when the leave can be taken.,1.0,The answer directly addresses the question and provides a clear and concise answer to it.
-What is the daily meal allowance cap while traveling for business?,policy_only,"The daily meal allowance cap while traveling for business is $75/day. This includes breakfast ($15), lunch ($20), and dinner ($40), inclusive of tax and tip. Alcohol is not reimbursable except at approved client entertainment events, up to $50/person.
-
-(Source: expense_reimbursement_policy.txt)",The daily meal allowance while traveling is capped at $75/day.,2,1.0,The answer accurately reflects the evidence provided for daily meal allowance cap and alcohol reimbursement rules.,1.0,The answer directly addresses the question and provides a clear daily meal allowance cap.
-Within how many days must an expense report be submitted?,policy_only,"Unfortunately, I do not have enough information to determine how many days an expense report must be submitted. The provided evidence does not mention any specific deadline for submitting expense reports. 
-
-However, it does mention that Finance may audit expense reports at random or based on risk indicators, and employees found to have submitted fraudulent expense claims are subject to disciplinary action (Source: expense_reimbursement_policy.txt).",Expense reports must be submitted within 30 days of the expense being incurred.,2,0.5,"The answer correctly states that the evidence does not mention a specific deadline for submitting expense reports, but incorrectly implies that it's the only relevant information about expense report submission. The evidence actually mentions that Manager approval is required for all reports and Finance approval is additionally required for reports exceeding $1,000.",0.0,Answer does not directly address the question and instead provides unrelated information about auditing and disciplinary action.
-What was the total contract value across all regions in 2025-Q1?,sql_only,"The total contract value across all regions in 2025-Q1 was $3,746,118.11. 
-
-(Source: SQL query: SELECT SUM(contract_value_usd) FROM sales WHERE quarter = '2025-Q1')",This requires summing contract_value_usd for quarter = '2025-Q1' in the sales database.,0,0.0,"The answer is a direct copy of the evidence, but it's not entirely accurate as it includes the source and SQL query details which are not present in the evidence.",1.0,The answer directly and accurately provides the requested information without any irrelevant details.
-Which product had the highest total contract value in 2025-Q3?,sql_only,"To determine which product had the highest total contract value in 2025-Q3, we can refer to the SQL query results:
-
-The products and their corresponding total contract values are:
-- Northwind Analytics: $875,815.55 (Source: SQL query)
-- Northwind Billing Suite: $983,299.79 (Source: SQL query)
-- Northwind CRM: $1,159,530.97 (Source: SQL query)
-- Northwind Support Desk: $724,273.05 (Source: SQL query)
-
-Comparing these values explicitly:
-
-* Northwind Analytics: $875,815.55
-* Northwind Billing Suite: $983,299.79
-* Northwind CRM: $1,159,530.97
-* Northwind Support Desk: $724,273.05
-
-The direct numeric comparison is:
-$1,159,530.97 is GREATER THAN $983,299.79, $1,159,530.97 is GREATER THAN $875,815.55, and $1,159,530.97 is GREATER THAN $724,273.05.
-
-Therefore, the product with the highest total contract value in 2025-Q3 is Northwind CRM (Source: SQL query).",This requires grouping by product for quarter = '2025-Q3' and finding the max total contract_value_usd.,2,1.0,"The answer accurately states that the product with the highest total contract value is Northwind CRM, and the evidence supports this claim by showing a total contract value of $1,159,530.97 for Northwind CRM.",0.8,"The answer provides the necessary information to determine which product had the highest total contract value, but it includes unnecessary steps and comparisons that do not directly address the question."
-What is the overall refund rate across all quarters?,sql_only,"To calculate the overall refund rate across all quarters, we need to divide the total refund amount by the total contract value. 
-
-The total refund amount is 352863.3 USD (Source: SQL query: SELECT SUM(refund_amount_usd) FROM sales). 
-The total contract value is 22440891.06 USD (Source: SQL query: SELECT SUM(contract_value_usd) FROM sales).
-
-To calculate the rate, we need to divide the refund amount by the contract value and express it as a percentage.
-
-However, since the evidence does not provide the combined total of refunds and contracts for all quarters, we cannot perform this calculation directly. The evidence provides a breakdown but not a combined total (Source: SQL query).
-
-Therefore, I must conclude that the overall refund rate across all quarters cannot be determined with the given evidence.",This requires SUM(refund_amount_usd) / SUM(contract_value_usd) * 100 across the entire sales table.,2,0.5,"The answer correctly identifies the need for a combined total of refunds and contracts to calculate the overall refund rate, but incorrectly states that the evidence does not provide this breakdown. The evidence actually provides separate totals for each quarter, which can be used to calculate the overall refund rate.",0.8,"Answer provides a clear method for calculating refund rate, but fails to provide actual calculation and is limited by data availability."
-How does our Q2 2025 refund rate compare to our stated refund policy threshold?,multi_hop,"To answer your question, I will follow the rules you provided.
-
-**Actual Q2 2025 refund rate:** 2.47% (Source: SQL query)
-**Policy threshold:** 3% (Source: refund_policy.txt)
-
-The direct numeric comparison is:
-2.47% is LESS THAN 3%
-
-Therefore, our Q2 2025 refund rate is below the stated refund policy threshold.",The Q2 2025 refund rate (approximately 2.47%) is below the internal refund rate threshold of 3% stated in the refund policy.,0,1.0,All factual claims are fully supported by the evidence.,1.0,The answer directly addresses the question by providing a specific comparison between the Q2 2025 refund rate and the stated policy threshold.
-Is our 2025-Q4 refund rate within the threshold defined in the refund policy?,multi_hop,"To determine if our 2025-Q4 refund rate is within the threshold defined in the refund policy, we need to compare the actual refund rate to the policy threshold.
-
-Actual Q4 2025 refund rate: 1.63% (Source: SQL query)
-Policy threshold: no more than 3% of total enterprise contract value refunded per quarter (Source: refund_policy.txt)
-
-Direct numeric comparison:
-1.63% is LESS THAN 3%
-
-Conclusion:
-The actual Q4 2025 refund rate of 1.63% is within the policy threshold of 3%.",This requires comparing the calculated 2025-Q4 refund rate against the 3% threshold stated in refund_policy.txt.,0,0.75,"The answer correctly states that the actual refund rate (1.63%) is less than the policy threshold (3%), but it does not mention the internal review process triggered by refund rates exceeding the threshold.",1.0,The answer directly addresses the question by comparing the actual refund rate to the policy threshold and concludes whether it is within the threshold.
-"If an enterprise customer's refund exceeds our internal quarterly threshold, what does policy say should happen, and was that threshold exceeded in 2026-Q1?",multi_hop,"To address the question of what happens if an enterprise customer's refund exceeds our internal quarterly threshold and whether that threshold was exceeded in 2026-Q1:
-
-The policy states that refunds exceeding the internal threshold trigger an internal review by the Finance and Customer Success leadership teams to identify root causes (Source: refund_policy.txt). The threshold is set at no more than 3% of total enterprise contract value refunded per quarter.
-
-To determine if this threshold was exceeded in 2026-Q1, we look at the SQL query result for that period. However, the evidence provided does not give a numeric value for refunds in 2026-Q1 (Source: SQL query). The query result is [{'SUM(contract_value_usd)': None}], indicating there are no records of refunded contract values for 2026-Q1.
-
-Therefore, based on the available information, we cannot determine if the threshold was exceeded in 2026-Q1 because there is insufficient data to make a comparison.",Policy states refund rates exceeding 3% per quarter trigger an internal review by Finance and Customer Success leadership; this requires checking whether 2026-Q1's actual refund rate exceeded 3%.,2,0.5,"The answer accurately states the policy regarding refund thresholds and internal reviews, but incorrectly assumes that the absence of data for 2026-Q1 means the threshold was not exceeded. The evidence does not provide a numeric value for refunds in 2026-Q1, but it also does not explicitly state that there were no refunds.",0.8,Answer addresses the question directly but includes unnecessary details and does not provide a clear numeric value for refunds in 2026-Q1 to make a comparison.
+**Conclusion:** The policy requires an internal review when refunds exceed 3 % of contract value, but the evidence does not allow us to confirm whether that threshold was exceeded in 2026‑Q1.",Policy states refund rates exceeding 3% per quarter trigger an internal review by Finance and Customer Success leadership; this requires checking whether 2026-Q1's actual refund rate exceeded 3%.,2,1.0,All factual statements in the answer are directly supported by the provided evidence.,1.0,"The answer directly states the policy action required when the refund exceeds the threshold and explains why it cannot confirm whether the threshold was exceeded in 2026-Q1, fully addressing both parts of the question without irrelevant content."

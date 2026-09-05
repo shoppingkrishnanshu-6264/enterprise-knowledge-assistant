@@ -19,9 +19,11 @@ from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
 load_dotenv()
+os.environ["LANGCHAIN_TRACING_V2"] = "false"
 
-JUDGE_MODEL = "llama-3.3-70b-versatile"
-judge_llm = ChatGroq(model=JUDGE_MODEL, temperature=0, api_key=os.getenv("GROQ_API_KEY"))
+JUDGE_MODEL = "openai/gpt-oss-120b"
+_judge_api_key = os.getenv("GROQ_API_KEY", "").strip().encode("ascii", "ignore").decode("ascii")
+judge_llm = ChatGroq(model=JUDGE_MODEL, temperature=0, api_key=_judge_api_key)
 
 
 def _extract_json(text: str) -> dict:

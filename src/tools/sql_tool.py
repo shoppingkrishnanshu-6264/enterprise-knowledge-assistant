@@ -18,6 +18,7 @@ from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
 load_dotenv()
+os.environ["LANGCHAIN_TRACING_V2"] = "false"
 
 DB_PATH = "data/structured/sales.db"
 TABLE_NAME = "sales"
@@ -85,9 +86,10 @@ def is_safe_select(sql: str) -> bool:
     return True
 
 
-def generate_sql(question: str, model: str = "llama-3.3-70b-versatile") -> str:
+def generate_sql(question: str, model: str = "openai/gpt-oss-120b") -> str:
     """Uses the Groq-hosted LLM to turn a natural-language question into SQL."""
-    llm = ChatGroq(model=model, temperature=0, api_key=os.getenv("GROQ_API_KEY"))
+    api_key = os.getenv("GROQ_API_KEY", "").strip().encode("ascii", "ignore").decode("ascii")
+    llm = ChatGroq(model=model, temperature=0, api_key=api_key)
     prompt = SQL_GENERATION_PROMPT.format(schema=SCHEMA_DESCRIPTION, question=question)
     response = llm.invoke(prompt)
     return clean_sql(response.content)
@@ -112,7 +114,7 @@ def execute_sql(sql: str) -> list[dict]:
     return rows
 
 
-def run_sql_tool(question: str, model: str = "llama-3.3-70b-versatile") -> dict:
+def run_sql_tool(question: str, model: str = "openai/gpt-oss-120b") -> dict:
     """
     Main entry point for the SQL tool.
     Returns a dict with the generated SQL, the result rows, and any error.
