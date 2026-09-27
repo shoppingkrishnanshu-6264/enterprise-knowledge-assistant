@@ -1,0 +1,153 @@
+name: Deploy to GKE (Multi-Cloud Backup)
+
+# Runs alongside the existing EKS deploy workflow. This one targets the
+# GCP/GKE warm-standby cluster described in "Disaster Recovery / Multi-Cloud
+# Backup". It never runs unless the real eval gate (run_eval.py +
+# check_threshold.py) passes.
+#
+# This is a single-service deploy: app.py runs a Streamlit UI backed by a
+# LangGraph graph (planner -> executor -> critic -> synthesizer) all in one
+# process. chroma_db/ and data/ are committed to the repo and baked into the
+# image at build time, so there is no separate data-sync step.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      replicas:
+        description: 'Replica count post-deploy (1 = warm standby, scale up for failover)'
+        required: false
+        default: '1'
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  GKE_CLUSTER: eka-backup-cluster
+  GKE_ZONE: us-central1-a
+  ARTIFACT_REGISTRY: us-central1-docker.pkg.dev
+  REPO_NAME: eka-assistant
+  IMAGE_NAME: eka-assistant
+  NAMESPACE: eka-backup
+
+jobs:
+  # ---------------------------------------------------------------
+  # Gate: block the deploy entirely if answer quality regresses
+  # ---------------------------------------------------------------
+  eval-gate:
+    name: Evaluation Gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run evaluation suite
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python eval/run_eval.py
+
+      - name: Enforce score threshold
+        run: python eval/check_threshold.py --threshold 0.7
+        # run_eval.py itself always exits 0 — check_threshold.py is what
+        # actually fails this job (and blocks build-and-push / deploy-gke)
+        # if faithfulness or answer_relevancy drops below 0.7.
+
+  # ---------------------------------------------------------------
+  # Build the single app image and push to Artifact Registry
+  # ---------------------------------------------------------------
+  build-and-push:
+    name: Build & Push Image
+    needs: eval-gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          # Workload Identity Federation — no long-lived JSON key stored in GitHub.
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker ${{ env.ARTIFACT_REGISTRY }} --quiet
+
+      - name: Build image
+        run: |
+          docker build \
+            -t ${{ env.ARTIFACT_REGISTRY }}/${{ env.PROJECT_ID }}/${{ env.REPO_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
+            .
+
+      - name: Push image
+        run: |
+          docker push ${{ env.ARTIFACT_REGISTRY }}/${{ env.PROJECT_ID }}/${{ env.REPO_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+
+  # ---------------------------------------------------------------
+  # Deploy to GKE and keep it scaled down (warm standby) by default
+  # ---------------------------------------------------------------
+  deploy-gke:
+    name: Deploy to GKE (Warm Standby)
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment: gke-backup
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: auth
+        name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          install_components: gke-gcloud-auth-plugin
+
+      - name: Get GKE credentials
+        uses: google-github-actions/get-gke-credentials@v2
+        with:
+          cluster_name: ${{ env.GKE_CLUSTER }}
+          location: ${{ env.GKE_ZONE }}
+
+      - name: Substitute image tag and project ID into manifest
+        run: |
+          sed -i \
+            -e "s|__IMAGE_TAG__|${{ github.sha }}|g" \
+            -e "s|__PROJECT_ID__|${{ env.PROJECT_ID }}|g" \
+            k8s/gke/eka-assistant-deployment.yaml
+
+      - name: Apply Kubernetes manifests
+        run: |
+          kubectl apply -f k8s/gke/namespace.yaml
+          kubectl apply -f k8s/gke/eka-assistant-deployment.yaml -n ${{ env.NAMESPACE }}
+
+      - name: Wait for rollout
+        run: |
+          kubectl rollout status deployment/eka-assistant -n ${{ env.NAMESPACE }} --timeout=180s
+
+      - name: Set replica count (warm standby by default)
+        run: |
+          replicas="${{ github.event.inputs.replicas || '1' }}"
+          kubectl scale deployment/eka-assistant -n ${{ env.NAMESPACE }} --replicas="$replicas"
+
+  notify:
+    name: Notify Deployment Status
+    needs: deploy-gke
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post status
+        run: |
+          echo "GKE backup deployment finished with status: ${{ needs.deploy-gke.result }}"

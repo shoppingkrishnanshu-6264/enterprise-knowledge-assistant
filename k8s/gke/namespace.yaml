@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: eka-backup
+  labels:
+    app.kubernetes.io/part-of: enterprise-knowledge-assistant
+    environment: gke-backup

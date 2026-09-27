@@ -1,0 +1,75 @@
+# Enterprise Knowledge Assistant — single Streamlit + LangGraph process.
+#
+# Planner / Executor / Critic / Synthesizer are LangGraph nodes running
+# in-process (see src/agents/graph.py) — NOT separate services. This
+# replaces the earlier 4-deployment design, which assumed a microservices
+# split that doesn't match the actual codebase.
+#
+# chroma_db/ and data/ are baked into the Docker image at build time
+# (see Dockerfile), so this pod needs no external vector-store URL and no
+# persistent volume — redeploying after a data update is the sync mechanism.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eka-assistant
+  namespace: eka-backup
+  labels:
+    app: eka-assistant
+spec:
+  replicas: 1  # scaled by the deploy workflow's "Set replica count" step
+  selector:
+    matchLabels:
+      app: eka-assistant
+  template:
+    metadata:
+      labels:
+        app: eka-assistant
+    spec:
+      containers:
+        - name: eka-assistant
+          image: us-central1-docker.pkg.dev/__PROJECT_ID__/eka-assistant/eka-assistant:__IMAGE_TAG__
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8501
+          env:
+            - name: GROQ_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: eka-backup-secrets
+                  key: groq-api-key
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1Gi
+            limits:
+              cpu: "1"
+              memory: 2Gi
+          readinessProbe:
+            httpGet:
+              path: /_stcore/health
+              port: 8501
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /_stcore/health
+              port: 8501
+            initialDelaySeconds: 20
+            periodSeconds: 20
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: eka-assistant
+  namespace: eka-backup
+  labels:
+    app: eka-assistant
+spec:
+  # LoadBalancer = simplest way to get a public IP for a demo/backup
+  # cluster. Swap to ClusterIP + Ingress later if you need TLS/a domain.
+  type: LoadBalancer
+  selector:
+    app: eka-assistant
+  ports:
+    - port: 80
+      targetPort: 8501
