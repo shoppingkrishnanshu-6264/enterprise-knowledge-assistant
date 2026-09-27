@@ -47,6 +47,7 @@ User (Streamlit chat UI)
 | Vector DB | ChromaDB (persisted locally in `chroma_db/`) |
 | Embeddings | `sentence-transformers` (`all-MiniLM-L6-v2`), local |
 | Structured DB | SQLite (`data/structured/sales.db`) |
+| API used| Groq API|
 | Frontend | Streamlit |
 | Evaluation | Custom LLM-as-judge (faithfulness + answer relevancy), replicating RAGAS methodology without RAGAS's dependency chain (see Section 5) |
 
