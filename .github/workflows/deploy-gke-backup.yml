@@ -50,10 +50,13 @@ jobs:
       - name: Run evaluation suite
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: python eval/run_eval.py
+        run: python -m eval.run_eval
+        # Run as a module (not `python eval/run_eval.py`) so the repo root
+        # is on sys.path — run_eval.py does `from src.agents.graph import ask`,
+        # which needs the root, not just the eval/ folder, importable.
 
       - name: Enforce score threshold
-        run: python eval/check_threshold.py --threshold 0.7
+        run: python -m eval.check_threshold --threshold 0.7
         # run_eval.py itself always exits 0 — check_threshold.py is what
         # actually fails this job (and blocks build-and-push / deploy-gke)
         # if faithfulness or answer_relevancy drops below 0.7.
