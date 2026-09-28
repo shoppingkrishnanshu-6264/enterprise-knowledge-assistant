@@ -20,6 +20,10 @@ on:
         required: false
         default: '1'
 
+permissions:
+  contents: read
+  id-token: write
+
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   GKE_CLUSTER: eka-backup-cluster
